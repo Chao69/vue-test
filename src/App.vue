@@ -1,18 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/test">Test</router-link>
-    </div>
-    <router-view />
+    <Navbar />
+    <router-link to="/test">Test</router-link>
+    <main class="mt-5 bg-white">
+      <router-view />
+    </main>
   </div>
 </template>
 <script>
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar.vue";
 
 export default {
-  name: 'App'
-}
+  components: {
+    Navbar,
+  },
+};
 </script>
 
 
